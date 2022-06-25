@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hypotenuse App</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <h1>Hypotenuse Calculator</h1> 
+    <h3>Find your hypotenuse in an instant !</h3><br>
+    <div id="img_div">
+        <img src="https://media.geeksforgeeks.org/wp-content/uploads/20220514192707/RightAngledTriangleabc.jpg">
+    </div>
+    
+    <br><br>
+    <input type="number" placeholder="Enter Side 1" id="text1">
+    <input type="number" placeholder="Enter Side 2" id="text2">
+    <br>
+    <button onclick="hypo()">Calculate</button>
+    <p> The length of your hypotenuse is : </p>
+    <b><div id="ans"></div></b>
+    <script>
+        var a ;
+        var b ;
+        var c ;
+        
+        function hypo(){
+        
+
+        a = document.getElementById("text1").value;
+        b = document.getElementById("text2").value;    
+        c = Math.pow(a,2) + Math.pow(b,2);
+        c = Math.sqrt(c);
+        c = parseInt(c);
+
+        document.getElementById("ans").innerHTML = c;
+        console.log(c); 
+        }
+    </script>
+</body>
+</html>
